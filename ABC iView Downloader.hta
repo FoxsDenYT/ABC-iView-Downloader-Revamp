@@ -38,12 +38,14 @@
       </div>
     </header>
   
-  <footer class="text-center">
+  <footer class="text-center footer">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p>Copyright © AussieApps. ABC iView is copyright of ABC Australia</p>
-          </div>
+            <p>Copyright © Fox's Den. ABC iView is copyright of ABC Australia</p>
+            <small><p>This program requires Microsoft Visual C++ 2010 SP1 Redistributable (x86) to function.  <a class="" href="#" onclick="runAnEXE('https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe', '')" ><small>Download Visual C++ 2010</small></a></p>
+            
+           </div>
         </div>
       </div>
   </footer>
@@ -74,13 +76,9 @@
     };
 	}
 			function downloadAll(){
-        arr = document.querySelector("UL").innerText.replace(/\n/g, '').split("✕")
-          for (var i = 0; i < arr.length; i++) {
-					if(arr[i] != ""){
-						runAnEXE("assets\\helper.bat", arr[i])
-					}
-				}
-			}
+            arr = document.querySelector("UL").innerText.replace(/\n/g, '').split("✕").join(" ")
+						runAnEXE("assets\\helper.bat", arr)
+				} 
 	
 	
 			function add(){
